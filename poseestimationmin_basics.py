@@ -27,13 +27,10 @@ while True:
             cv2.circle(img, (cx, cy), 5, (255, 0, 0), cv2.FILLED)
 
     current_time = time.time()
-    fps = 1 / (current_time-previous_time)
+    fps = 1 / (current_time - previous_time)
     previous_time = current_time
 
 
     cv2.putText(img, str(int(fps)), (70, 50), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 0), 3)
     cv2.imshow('Image', img)
     cv2.waitKey(1)
-
-# TODO fps display is not working
-
